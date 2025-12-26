@@ -1,1 +1,4 @@
-/home/nbalu/ros2_ws/src/person_msgs/srv/Query.srv
+string time
+---
+string now
+

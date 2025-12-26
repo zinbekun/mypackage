@@ -24,15 +24,15 @@ namespace srv
 namespace builder
 {
 
-class Init_Query_Request_name
+class Init_Query_Request_time
 {
 public:
-  Init_Query_Request_name()
+  Init_Query_Request_time()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::person_msgs::srv::Query_Request name(::person_msgs::srv::Query_Request::_name_type arg)
+  ::person_msgs::srv::Query_Request time(::person_msgs::srv::Query_Request::_time_type arg)
   {
-    msg_.name = std::move(arg);
+    msg_.time = std::move(arg);
     return std::move(msg_);
   }
 
@@ -51,7 +51,7 @@ template<>
 inline
 auto build<::person_msgs::srv::Query_Request>()
 {
-  return person_msgs::srv::builder::Init_Query_Request_name();
+  return person_msgs::srv::builder::Init_Query_Request_time();
 }
 
 }  // namespace person_msgs
@@ -66,15 +66,15 @@ namespace srv
 namespace builder
 {
 
-class Init_Query_Response_age
+class Init_Query_Response_now
 {
 public:
-  Init_Query_Response_age()
+  Init_Query_Response_now()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::person_msgs::srv::Query_Response age(::person_msgs::srv::Query_Response::_age_type arg)
+  ::person_msgs::srv::Query_Response now(::person_msgs::srv::Query_Response::_now_type arg)
   {
-    msg_.age = std::move(arg);
+    msg_.now = std::move(arg);
     return std::move(msg_);
   }
 
@@ -93,7 +93,7 @@ template<>
 inline
 auto build<::person_msgs::srv::Query_Response>()
 {
-  return person_msgs::srv::builder::Init_Query_Response_age();
+  return person_msgs::srv::builder::Init_Query_Response_now();
 }
 
 }  // namespace person_msgs

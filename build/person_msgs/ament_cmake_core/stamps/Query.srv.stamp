@@ -1,4 +1,4 @@
-string name
+string time
 ---
-uint8 age
+string now
 

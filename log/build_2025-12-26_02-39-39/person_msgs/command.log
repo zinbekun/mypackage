@@ -1,4 +1,0 @@
-Invoking command in '/home/nbalu/ros2_ws/build/person_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nbalu/ros2_ws/install/mypkg:/opt/ros/jazzy /usr/bin/cmake --build /home/nbalu/ros2_ws/build/person_msgs -- -j16 -l16
-Invoked command in '/home/nbalu/ros2_ws/build/person_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nbalu/ros2_ws/install/mypkg:/opt/ros/jazzy /usr/bin/cmake --build /home/nbalu/ros2_ws/build/person_msgs -- -j16 -l16
-Invoking command in '/home/nbalu/ros2_ws/build/person_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nbalu/ros2_ws/install/mypkg:/opt/ros/jazzy /usr/bin/cmake --install /home/nbalu/ros2_ws/build/person_msgs
-Invoked command in '/home/nbalu/ros2_ws/build/person_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nbalu/ros2_ws/install/mypkg:/opt/ros/jazzy /usr/bin/cmake --install /home/nbalu/ros2_ws/build/person_msgs

@@ -28,10 +28,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: name
+  // member: time
   {
-    out << "name: ";
-    rosidl_generator_traits::value_to_yaml(msg.name, out);
+    out << "time: ";
+    rosidl_generator_traits::value_to_yaml(msg.time, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -40,13 +40,13 @@ inline void to_block_style_yaml(
   const Query_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: name
+  // member: time
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "name: ";
-    rosidl_generator_traits::value_to_yaml(msg.name, out);
+    out << "time: ";
+    rosidl_generator_traits::value_to_yaml(msg.time, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
@@ -120,10 +120,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: age
+  // member: now
   {
-    out << "age: ";
-    rosidl_generator_traits::value_to_yaml(msg.age, out);
+    out << "now: ";
+    rosidl_generator_traits::value_to_yaml(msg.now, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -132,13 +132,13 @@ inline void to_block_style_yaml(
   const Query_Response & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: age
+  // member: now
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "age: ";
-    rosidl_generator_traits::value_to_yaml(msg.age, out);
+    out << "now: ";
+    rosidl_generator_traits::value_to_yaml(msg.now, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
@@ -189,11 +189,11 @@ inline const char * name<person_msgs::srv::Query_Response>()
 
 template<>
 struct has_fixed_size<person_msgs::srv::Query_Response>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<person_msgs::srv::Query_Response>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<person_msgs::srv::Query_Response>

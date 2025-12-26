@@ -21,13 +21,13 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'name'
+// Member 'time'
 #include "rosidl_runtime_c/string.h"
 
 /// Struct defined in srv/Query in the package person_msgs.
 typedef struct person_msgs__srv__Query_Request
 {
-  rosidl_runtime_c__String name;
+  rosidl_runtime_c__String time;
 } person_msgs__srv__Query_Request;
 
 // Struct for a sequence of person_msgs__srv__Query_Request.
@@ -42,10 +42,15 @@ typedef struct person_msgs__srv__Query_Request__Sequence
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'now'
+// already included above
+// #include "rosidl_runtime_c/string.h"
+
 /// Struct defined in srv/Query in the package person_msgs.
 typedef struct person_msgs__srv__Query_Response
 {
-  uint8_t age;
+  rosidl_runtime_c__String now;
 } person_msgs__srv__Query_Response;
 
 // Struct for a sequence of person_msgs__srv__Query_Response.

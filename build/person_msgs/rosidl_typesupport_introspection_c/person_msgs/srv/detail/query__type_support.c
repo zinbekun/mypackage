@@ -13,7 +13,7 @@
 
 
 // Include directives for member types
-// Member `name`
+// Member `time`
 #include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
@@ -37,7 +37,7 @@ void person_msgs__srv__Query_Request__rosidl_typesupport_introspection_c__Query_
 
 static rosidl_typesupport_introspection_c__MessageMember person_msgs__srv__Query_Request__rosidl_typesupport_introspection_c__Query_Request_message_member_array[1] = {
   {
-    "name",  // name
+    "time",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
@@ -45,7 +45,7 @@ static rosidl_typesupport_introspection_c__MessageMember person_msgs__srv__Query
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(person_msgs__srv__Query_Request, name),  // bytes offset in struct
+    offsetof(person_msgs__srv__Query_Request, time),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -109,6 +109,11 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 // #include "person_msgs/srv/detail/query__struct.h"
 
 
+// Include directives for member types
+// Member `now`
+// already included above
+// #include "rosidl_runtime_c/string_functions.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -130,15 +135,15 @@ void person_msgs__srv__Query_Response__rosidl_typesupport_introspection_c__Query
 
 static rosidl_typesupport_introspection_c__MessageMember person_msgs__srv__Query_Response__rosidl_typesupport_introspection_c__Query_Response_message_member_array[1] = {
   {
-    "age",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
+    "now",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(person_msgs__srv__Query_Response, age),  // bytes offset in struct
+    offsetof(person_msgs__srv__Query_Response, now),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

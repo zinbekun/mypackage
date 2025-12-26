@@ -36,8 +36,8 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // name
-#include "rosidl_runtime_c/string_functions.h"  // name
+#include "rosidl_runtime_c/string.h"  // time
+#include "rosidl_runtime_c/string_functions.h"  // time
 
 // forward declare type support functions
 
@@ -50,9 +50,9 @@ bool cdr_serialize_person_msgs__srv__Query_Request(
   const person_msgs__srv__Query_Request * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: name
+  // Field name: time
   {
-    const rosidl_runtime_c__String * str = &ros_message->name;
+    const rosidl_runtime_c__String * str = &ros_message->time;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -72,18 +72,18 @@ bool cdr_deserialize_person_msgs__srv__Query_Request(
   eprosima::fastcdr::Cdr & cdr,
   person_msgs__srv__Query_Request * ros_message)
 {
-  // Field name: name
+  // Field name: time
   {
     std::string tmp;
     cdr >> tmp;
-    if (!ros_message->name.data) {
-      rosidl_runtime_c__String__init(&ros_message->name);
+    if (!ros_message->time.data) {
+      rosidl_runtime_c__String__init(&ros_message->time);
     }
     bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->name,
+      &ros_message->time,
       tmp.c_str());
     if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'name'\n");
+      fprintf(stderr, "failed to assign string into field 'time'\n");
       return false;
     }
   }
@@ -106,10 +106,10 @@ size_t get_serialized_size_person_msgs__srv__Query_Request(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: name
+  // Field name: time
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->name.size + 1);
+    (ros_message->time.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -133,7 +133,7 @@ size_t max_serialized_size_person_msgs__srv__Query_Request(
   full_bounded = true;
   is_plain = true;
 
-  // Field name: name
+  // Field name: time
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -154,7 +154,7 @@ size_t max_serialized_size_person_msgs__srv__Query_Request(
     using DataType = person_msgs__srv__Query_Request;
     is_plain =
       (
-      offsetof(DataType, name) +
+      offsetof(DataType, time) +
       last_member_size
       ) == ret_val;
   }
@@ -166,9 +166,9 @@ bool cdr_serialize_key_person_msgs__srv__Query_Request(
   const person_msgs__srv__Query_Request * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: name
+  // Field name: time
   {
-    const rosidl_runtime_c__String * str = &ros_message->name;
+    const rosidl_runtime_c__String * str = &ros_message->time;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -198,10 +198,10 @@ size_t get_serialized_size_key_person_msgs__srv__Query_Request(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: name
+  // Field name: time
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->name.size + 1);
+    (ros_message->time.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -223,7 +223,7 @@ size_t max_serialized_size_key_person_msgs__srv__Query_Request(
 
   full_bounded = true;
   is_plain = true;
-  // Field name: name
+  // Field name: time
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -243,7 +243,7 @@ size_t max_serialized_size_key_person_msgs__srv__Query_Request(
     using DataType = person_msgs__srv__Query_Request;
     is_plain =
       (
-      offsetof(DataType, name) +
+      offsetof(DataType, time) +
       last_member_size
       ) == ret_val;
   }
@@ -372,6 +372,10 @@ extern "C"
 {
 #endif
 
+// already included above
+// #include "rosidl_runtime_c/string.h"  // now
+// already included above
+// #include "rosidl_runtime_c/string_functions.h"  // now
 
 // forward declare type support functions
 
@@ -384,9 +388,18 @@ bool cdr_serialize_person_msgs__srv__Query_Response(
   const person_msgs__srv__Query_Response * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: age
+  // Field name: now
   {
-    cdr << ros_message->age;
+    const rosidl_runtime_c__String * str = &ros_message->now;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
   }
 
   return true;
@@ -397,9 +410,20 @@ bool cdr_deserialize_person_msgs__srv__Query_Response(
   eprosima::fastcdr::Cdr & cdr,
   person_msgs__srv__Query_Response * ros_message)
 {
-  // Field name: age
+  // Field name: now
   {
-    cdr >> ros_message->age;
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->now.data) {
+      rosidl_runtime_c__String__init(&ros_message->now);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->now,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'now'\n");
+      return false;
+    }
   }
 
   return true;
@@ -420,12 +444,10 @@ size_t get_serialized_size_person_msgs__srv__Query_Response(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: age
-  {
-    size_t item_size = sizeof(ros_message->age);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
+  // Field name: now
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->now.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -449,11 +471,16 @@ size_t max_serialized_size_person_msgs__srv__Query_Response(
   full_bounded = true;
   is_plain = true;
 
-  // Field name: age
+  // Field name: now
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
   }
 
 
@@ -465,7 +492,7 @@ size_t max_serialized_size_person_msgs__srv__Query_Response(
     using DataType = person_msgs__srv__Query_Response;
     is_plain =
       (
-      offsetof(DataType, age) +
+      offsetof(DataType, now) +
       last_member_size
       ) == ret_val;
   }
@@ -477,9 +504,18 @@ bool cdr_serialize_key_person_msgs__srv__Query_Response(
   const person_msgs__srv__Query_Response * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: age
+  // Field name: now
   {
-    cdr << ros_message->age;
+    const rosidl_runtime_c__String * str = &ros_message->now;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
   }
 
   return true;
@@ -500,12 +536,10 @@ size_t get_serialized_size_key_person_msgs__srv__Query_Response(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: age
-  {
-    size_t item_size = sizeof(ros_message->age);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
+  // Field name: now
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->now.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -527,11 +561,16 @@ size_t max_serialized_size_key_person_msgs__srv__Query_Response(
 
   full_bounded = true;
   is_plain = true;
-  // Field name: age
+  // Field name: now
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
   }
 
   size_t ret_val = current_alignment - initial_alignment;
@@ -542,7 +581,7 @@ size_t max_serialized_size_key_person_msgs__srv__Query_Response(
     using DataType = person_msgs__srv__Query_Response;
     is_plain =
       (
-      offsetof(DataType, age) +
+      offsetof(DataType, now) +
       last_member_size
       ) == ret_val;
   }

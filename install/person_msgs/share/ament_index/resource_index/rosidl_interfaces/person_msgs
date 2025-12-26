@@ -1,1 +1,4 @@
-/home/nbalu/ros2_ws/build/person_msgs/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/person_msgs
+msg/Person.idl
+msg/Person.msg
+srv/Query.idl
+srv/Query.srv

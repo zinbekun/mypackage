@@ -4,7 +4,7 @@
       "type_name": "person_msgs/srv/Query_Request",
       "fields": [
         {
-          "name": "name",
+          "name": "time",
           "type": {
             "type_id": 17,
             "capacity": 0,
@@ -20,7 +20,7 @@
   "type_hashes": [
     {
       "type_name": "person_msgs/srv/Query_Request",
-      "hash_string": "RIHS01_900d2fd481a9da0a75a56e8fb803ff2a9f9c653eda68cb438141ab9a83bab922"
+      "hash_string": "RIHS01_03538cf4dace40790cc4bee406f0d152742c3014702e817615cb55d660b11224"
     }
   ]
 }

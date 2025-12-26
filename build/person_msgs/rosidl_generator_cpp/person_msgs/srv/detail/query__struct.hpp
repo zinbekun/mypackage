@@ -41,30 +41,30 @@ struct Query_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->name = "";
+      this->time = "";
     }
   }
 
   explicit Query_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : name(_alloc)
+  : time(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->name = "";
+      this->time = "";
     }
   }
 
   // field types and members
-  using _name_type =
+  using _time_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
-  _name_type name;
+  _time_type time;
 
   // setters for named parameter idiom
-  Type & set__name(
+  Type & set__time(
     const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
-    this->name = _arg;
+    this->time = _arg;
     return *this;
   }
 
@@ -110,7 +110,7 @@ struct Query_Request_
   // comparison operators
   bool operator==(const Query_Request_ & other) const
   {
-    if (this->name != other.name) {
+    if (this->time != other.time) {
       return false;
     }
     return true;
@@ -155,30 +155,30 @@ struct Query_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->age = 0;
+      this->now = "";
     }
   }
 
   explicit Query_Response_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : now(_alloc)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->age = 0;
+      this->now = "";
     }
   }
 
   // field types and members
-  using _age_type =
-    uint8_t;
-  _age_type age;
+  using _now_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _now_type now;
 
   // setters for named parameter idiom
-  Type & set__age(
-    const uint8_t & _arg)
+  Type & set__now(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
-    this->age = _arg;
+    this->now = _arg;
     return *this;
   }
 
@@ -224,7 +224,7 @@ struct Query_Response_
   // comparison operators
   bool operator==(const Query_Response_ & other) const
   {
-    if (this->age != other.age) {
+    if (this->now != other.now) {
       return false;
     }
     return true;

@@ -65,7 +65,7 @@
         "type_name": "person_msgs/srv/Query_Request",
         "fields": [
           {
-            "name": "name",
+            "name": "time",
             "type": {
               "type_id": 17,
               "capacity": 0,
@@ -80,9 +80,9 @@
         "type_name": "person_msgs/srv/Query_Response",
         "fields": [
           {
-            "name": "age",
+            "name": "now",
             "type": {
-              "type_id": 3,
+              "type_id": 17,
               "capacity": 0,
               "string_capacity": 0,
               "nested_type_name": ""
@@ -141,7 +141,7 @@
   "type_hashes": [
     {
       "type_name": "person_msgs/srv/Query_Event",
-      "hash_string": "RIHS01_5980ebada3225fd378a0ee169c475c38c86a8f2137b60ef7ec5df075f16aa8b1"
+      "hash_string": "RIHS01_b2832d9d40468c17b79b95d0dc6771da755b8f454fec0e2f138eb0f8b062358c"
     },
     {
       "type_name": "builtin_interfaces/msg/Time",
@@ -149,11 +149,11 @@
     },
     {
       "type_name": "person_msgs/srv/Query_Request",
-      "hash_string": "RIHS01_900d2fd481a9da0a75a56e8fb803ff2a9f9c653eda68cb438141ab9a83bab922"
+      "hash_string": "RIHS01_03538cf4dace40790cc4bee406f0d152742c3014702e817615cb55d660b11224"
     },
     {
       "type_name": "person_msgs/srv/Query_Response",
-      "hash_string": "RIHS01_ec2d589a1a2c08d8500ca93024cd27401f781889a60b2afd9d32e6d655b7cbf1"
+      "hash_string": "RIHS01_a22dde3ad1fd38e1aa84bc7c067073f4ad49c936449967279c23ec66fdac29fe"
     },
     {
       "type_name": "service_msgs/msg/ServiceEventInfo",

@@ -36,8 +36,8 @@ cdr_serialize(
   const person_msgs::srv::Query_Request & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: name
-  cdr << ros_message.name;
+  // Member: time
+  cdr << ros_message.time;
 
   return true;
 }
@@ -48,8 +48,8 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   person_msgs::srv::Query_Request & ros_message)
 {
-  // Member: name
-  cdr >> ros_message.name;
+  // Member: time
+  cdr >> ros_message.time;
 
   return true;
 }  // NOLINT(readability/fn_size)
@@ -68,10 +68,10 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: name
+  // Member: time
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.name.size() + 1);
+    (ros_message.time.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -96,7 +96,7 @@ max_serialized_size_Query_Request(
   full_bounded = true;
   is_plain = true;
 
-  // Member: name
+  // Member: time
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -116,7 +116,7 @@ max_serialized_size_Query_Request(
     using DataType = person_msgs::srv::Query_Request;
     is_plain =
       (
-      offsetof(DataType, name) +
+      offsetof(DataType, time) +
       last_member_size
       ) == ret_val;
   }
@@ -130,8 +130,8 @@ cdr_serialize_key(
   const person_msgs::srv::Query_Request & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: name
-  cdr << ros_message.name;
+  // Member: time
+  cdr << ros_message.time;
 
   return true;
 }
@@ -149,10 +149,10 @@ get_serialized_size_key(
   (void)padding;
   (void)wchar_size;
 
-  // Member: name
+  // Member: time
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.name.size() + 1);
+    (ros_message.time.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -176,7 +176,7 @@ max_serialized_size_key_Query_Request(
   full_bounded = true;
   is_plain = true;
 
-  // Member: name
+  // Member: time
   {
     size_t array_size = 1;
     full_bounded = false;
@@ -196,7 +196,7 @@ max_serialized_size_key_Query_Request(
     using DataType = person_msgs::srv::Query_Request;
     is_plain =
       (
-      offsetof(DataType, name) +
+      offsetof(DataType, time) +
       last_member_size
       ) == ret_val;
   }
@@ -342,8 +342,8 @@ cdr_serialize(
   const person_msgs::srv::Query_Response & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: age
-  cdr << ros_message.age;
+  // Member: now
+  cdr << ros_message.now;
 
   return true;
 }
@@ -354,8 +354,8 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   person_msgs::srv::Query_Response & ros_message)
 {
-  // Member: age
-  cdr >> ros_message.age;
+  // Member: now
+  cdr >> ros_message.now;
 
   return true;
 }  // NOLINT(readability/fn_size)
@@ -374,12 +374,10 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: age
-  {
-    size_t item_size = sizeof(ros_message.age);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
+  // Member: now
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.now.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -404,11 +402,16 @@ max_serialized_size_Query_Response(
   full_bounded = true;
   is_plain = true;
 
-  // Member: age
+  // Member: now
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
   }
 
   size_t ret_val = current_alignment - initial_alignment;
@@ -419,7 +422,7 @@ max_serialized_size_Query_Response(
     using DataType = person_msgs::srv::Query_Response;
     is_plain =
       (
-      offsetof(DataType, age) +
+      offsetof(DataType, now) +
       last_member_size
       ) == ret_val;
   }
@@ -433,8 +436,8 @@ cdr_serialize_key(
   const person_msgs::srv::Query_Response & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: age
-  cdr << ros_message.age;
+  // Member: now
+  cdr << ros_message.now;
 
   return true;
 }
@@ -452,12 +455,10 @@ get_serialized_size_key(
   (void)padding;
   (void)wchar_size;
 
-  // Member: age
-  {
-    size_t item_size = sizeof(ros_message.age);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
+  // Member: now
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.now.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -481,11 +482,16 @@ max_serialized_size_key_Query_Response(
   full_bounded = true;
   is_plain = true;
 
-  // Member: age
+  // Member: now
   {
     size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
   }
 
   size_t ret_val = current_alignment - initial_alignment;
@@ -496,7 +502,7 @@ max_serialized_size_key_Query_Response(
     using DataType = person_msgs::srv::Query_Response;
     is_plain =
       (
-      offsetof(DataType, age) +
+      offsetof(DataType, now) +
       last_member_size
       ) == ret_val;
   }
