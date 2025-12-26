@@ -1,0 +1,1 @@
+/home/nbalu/ros2_ws/build/person_msgs/rosidl_typesupport_introspection_c/person_msgs/srv/detail/query__rosidl_typesupport_introspection_c.h
